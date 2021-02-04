@@ -1,10 +1,14 @@
 function setup() {
-	createCanvas(720, 480);
+	createCanvas(1200, 880);
+	print("Starting up simple shapes")
 	strokeWeight(2);
 	ellipseMode(RADIUS);
+
+	print("Width = " + width);
+	print("Height = " + height);	
 }
 
-function draw() {
+function drawRobot() {
 	background(135,31,120);
 
 	// Neck

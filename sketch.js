@@ -6,6 +6,8 @@ function setup() {
 
 	print("Width = " + width);
 	print("Height = " + height);	
+
+	drawRobot();
 }
 
 function drawRobot() {

@@ -9,7 +9,7 @@ function setup() {
 
 	drawRobot();
 	//drawFoldedPaper();
-	//drawSublimeLogo();
+	drawSublimeLogo();
 }
 
 function drawRobot() {
@@ -51,9 +51,9 @@ function drawFoldedPaper() {
 }
 
 function drawSublimeLogo() {
-	let logoWidth  = 120;
-	let logoHeight = 500;
-	let flapWidth  = 50;
+	let logoWidth  = 150;
+	let logoHeight = 300;
+	let flapWidth  = 60;
 
 	let xCenter = width/2;
 	let yCenter = height/2;
@@ -71,10 +71,20 @@ function drawSublimeLogo() {
 	var yLogoInnerRightBottom = yCenter - flapWidth;
 
 	fill(255,152,3); // set fill to orange
-	quad(
+	quad(								// top quad
 		xLogoLeft,  yLogoInnerLeftTop,  // x1, y1
 		xLogoLeft,  yCenter,		    // x2, y2
 		xLogoRight, yLogoInnerRightTop, // x3, y3
 		xLogoRight, yLogoTop);          // x4, y4
+	quad(								   // center rquad
+		xLogoLeft,  yLogoInnerLeftTop,     // x1, y1
+		xLogoLeft,  yCenter,		       // x2, y2
+		xLogoRight, yLogoInnerRightBottom, // x3, y3
+		xLogoRight, yCenter);			   // x4, y4
+	quad(								   // botttom quad
+		xLogoLeft, yLogoInnerLeftBottom,   // x1, y1
+		xLogoLeft, yLogoBottom,            // x2, y2
+		xLogoRight, yLogoInnerRightBottom, // x3, y3
+		xLogoRight, yCenter);              // x4, y4
 }
 
